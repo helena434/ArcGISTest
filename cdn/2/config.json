@@ -205,7 +205,8 @@
   "attributes": {
     "portalUrl": "https://ugoe.maps.arcgis.com",
     "isWebTier": false,
-    "clientId": "",
+    "clientId": "rOikuO9yeQQsh3Oi",
+    "redirectUri": "https://helena434.github.io/ArcGISTest/callback",
     "title": "TestMap",
     "description": "",
     "type": "Web Experience",
