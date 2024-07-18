@@ -1,0 +1,181 @@
+{
+  "pages": {
+    "page_0": {
+      "id": "page_0",
+      "mode": "FIT_WINDOW",
+      "type": "NORMAL",
+      "layout": {
+        "LARGE": "layout_0"
+      },
+      "isDefault": true,
+      "isVisible": true,
+      "label": "Page"
+    }
+  },
+  "layouts": {
+    "layout_0": {
+      "type": "FIXED",
+      "content": {
+        "0": {
+          "type": "WIDGET",
+          "widgetId": "widget_1",
+          "bbox": {
+            "left": "0.0%",
+            "right": "0.0%",
+            "top": "0.0%",
+            "bottom": "0.0%",
+            "width": "100.0%",
+            "height": "100.0%"
+          },
+          "setting": {
+            "autoProps": {
+              "left": true,
+              "right": false,
+              "top": true,
+              "bottom": false
+            }
+          }
+        }
+      },
+      "order": [
+        "0"
+      ]
+    },
+    "layout_1": {
+      "content": {
+        "0": {
+          "type": "WIDGET",
+          "widgetId": "widget_2",
+          "bbox": {
+            "left": "0.7%",
+            "right": "71.3%",
+            "top": "0.0%",
+            "bottom": "40.3%",
+            "width": "28.0%",
+            "height": "59.8%"
+          },
+          "setting": {
+            "autoProps": {
+              "left": false,
+              "right": true,
+              "top": false,
+              "bottom": true
+            }
+          }
+        }
+      },
+      "type": "FIXED",
+      "label": "Map FixedLayout",
+      "order": [
+        "0"
+      ]
+    }
+  },
+  "exbVersion": "1.13.0",
+  "mainSizeMode": "LARGE",
+  "theme": "themes/default/",
+  "forBuilderAttributes": {
+    "lockLayout": false
+  },
+  "template": "blankfullscreen",
+  "widgets": {
+    "widget_1": {
+      "uri": "widgets/arcgis/arcgis-map/",
+      "version": "1.13.0",
+      "label": "Map",
+      "config": {
+        "toolConfig": {
+          "canZoom": true,
+          "canHome": true,
+          "canSearch": false,
+          "canNavigation": false
+        },
+        "isUseCustomMapState": false
+      },
+      "id": "widget_1",
+      "layouts": {
+        "MapFixedLayout": {
+          "LARGE": "layout_1"
+        }
+      },
+      "useDataSources": [
+        {
+          "dataSourceId": "dataSource_1",
+          "mainDataSourceId": "dataSource_1"
+        }
+      ]
+    },
+    "widget_2": {
+      "uri": "widgets/arcgis/analysis/",
+      "version": "1.13.0",
+      "label": "Analysis",
+      "config": {
+        "toolList": [
+          {
+            "id": "ee692da0-4508-11ef-9e02-717b784b55ad",
+            "type": "standard",
+            "toolName": "AggregatePoints",
+            "config": {
+              "input": {
+                "selectFromMapLayer": false,
+                "allowBrowserLayers": false,
+                "allowDrawingOnTheMap": false,
+                "allowLocalFileUpload": false,
+                "allowServiceUrl": false,
+                "selectFromOtherWidget": false
+              },
+              "output": {
+                "addResultLayersToMapAuto": false,
+                "allowExportResults": false
+              },
+              "option": {}
+            }
+          }
+        ]
+      },
+      "id": "widget_2",
+      "useMapWidgetIds": [
+        "widget_1"
+      ]
+    }
+  },
+  "widgetsManifest": {},
+  "views": {},
+  "sections": {},
+  "dialogs": {},
+  "dataSources": {
+    "dataSource_1": {
+      "id": "dataSource_1",
+      "type": "WEB_MAP",
+      "sourceLabel": "Patagonia",
+      "itemId": "6e41a57b268e499f8d3af0782a51941f",
+      "portalUrl": "https://ugoe.maps.arcgis.com"
+    }
+  },
+  "messageConfigs": {},
+  "attributes": {
+    "portalUrl": "https://ugoe.maps.arcgis.com",
+    "isWebTier": false,
+    "clientId": "",
+    "title": "TestMap",
+    "description": "",
+    "type": "Web Experience",
+    "thumbnail": null
+  },
+  "sharedThemeVariables": {
+    "header": {},
+    "body": {},
+    "button": {},
+    "logo": {
+      "small": null,
+      "link": null
+    }
+  },
+  "originExbVersion": "1.13.0",
+  "pageStructure": [
+    {
+      "page_0": []
+    }
+  ],
+  "timestamp": 1721309021671
+}
